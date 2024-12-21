@@ -1,0 +1,18 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #2d3e50; /* Color oscuro para el panel */
+    color: white;
+    padding: 20px;
+  }
+  
+  .content {
+    width: 80%;
+    background-color: #f4f4f4; /* Color claro para el espacio vacío */
+    padding: 20px;
+  }
+  

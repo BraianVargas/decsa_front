@@ -1,0 +1,21 @@
+<div class="dashboard-container">
+    <!-- Panel izquierdo estático -->
+    <ng-container>
+        <div class="sidebar">
+            <h3>Panel Izquierdo</h3>
+            <ul>
+                <li>Opción 1</li>
+                <li>Opción 2</li>
+                <li>Opción 3</li>
+            </ul>
+        </div>
+    </ng-container>
+
+    <!-- Contenido vacío -->
+    <ng-container [ngTemplateOutlet]="profileTemplate()">
+        <ng-template #carga_notas>
+            <app-admin/>
+        </ng-template>
+        
+    </ng-container>
+</div>

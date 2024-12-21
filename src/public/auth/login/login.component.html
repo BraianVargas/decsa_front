@@ -1,0 +1,38 @@
+
+<div class="card p-4 text-center">
+    <form [formGroup]="loginForm" (submit)="onLogin($event)" >
+        <h2 class="text-center my-4">Login</h2>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Usuario</mat-label>
+            <input matInput formControlName="username">
+            <mat-icon matSuffix>account_circle</mat-icon>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="password" matInput [type]="hide() ? 'password' : 'text'" />
+            <button
+                mat-icon-button
+                matSuffix
+                (click)="clickEvent($event)"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide()"
+            >
+            <mat-icon matSuffix>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            
+            @if(loginForm.get('username')?.hasError('required') == true || loginForm.get('password')?.hasError('required') == true){
+                <mat-error>
+                    Campo requerido
+                </mat-error>
+            }
+        </mat-form-field>
+        
+        <div class="button-container">
+            <button mat-fab extended routerLink="." class="m-auto" type="submit">Iniciar sesion</button>
+        </div>
+    </form>
+    
+
+</div>

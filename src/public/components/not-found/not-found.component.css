@@ -1,0 +1,14 @@
+.card {
+    background-color: rgba(86, 158, 230, 0.205);
+    width: 500px;
+}
+.error-container{
+    text-align: center;
+
+}
+.button-container {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
