@@ -14,4 +14,4 @@ export class BaseComponent {
   carga_notas : any = viewChild('carga_notas',{ read : TemplateRef })
   profileTemplate = computed(() => this.isAdmin() ? this.carga_notas() : this.carga_notas());
 
-}
+} 
