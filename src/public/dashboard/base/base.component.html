@@ -1,20 +1,29 @@
 <div class="dashboard-container">
     <!-- Panel izquierdo estático -->
+    @if(false){
+
+    }
     <ng-container>
         <div class="sidebar">
-            <h3>Panel Izquierdo</h3>
+            <!-- insert logo from assets -->
+            <img src="/assets/images/1.jpg" alt="Image description" />
+            
+            <h3>DECSA</h3>
             <ul>
-                <li>Opción 1</li>
-                <li>Opción 2</li>
-                <li>Opción 3</li>
+            <li [class.active]="router.url === '/cargar_notas'">
+                <a routerLink="/cargar_notas">Cargar notas</a>
+            </li>
+            <li [class.active]="router.url === '/gestionar-usuarios'">
+                <a routerLink="/gestionar-usuarios">Gestionar Usuarios</a>
+            </li>
             </ul>
         </div>
     </ng-container>
-
-    <!-- Contenido vacío -->
-    <ng-container [ngTemplateOutlet]="profileTemplate()">
+    
+    <ng-container [ngTemplateOutlet]="cargaNotasTemplate()">
         <ng-template #carga_notas>
-            <app-admin/>
+            <!-- Renderizar aqui -->
+            <router-outlet></router-outlet>
         </ng-template>
         
     </ng-container>

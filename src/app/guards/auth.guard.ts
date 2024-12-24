@@ -13,7 +13,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   let url_response : UrlTree;
 
   if(authService.verifRole().toLowerCase() == 'secretaria'){
-    url_response = router.createUrlTree(['/secretaria'])
+    url_response = router.createUrlTree(['/']);
   }else{
     return false
   }
